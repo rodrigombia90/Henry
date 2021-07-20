@@ -1,0 +1,15 @@
+constructor
+//recordar siemper que los constructores empiezan con mayuscula
+function Persona (nombre, apellido){
+	this.nombre=nombre || 'juan' //juan es el valor por defecto, por si nombre viene vacio, le asigna 'juan'
+	this.apellido=apellido ||'perez';
+}
+
+Persona.protoype.getNombre = function(){
+	return this.nombre + ' ' + this.apellido;
+}
+
+var toni= new Person('Toni','tralice');
+var tincho=new Person('Martin','perez');
+var emi=new Person('Emi','Lopez');
+

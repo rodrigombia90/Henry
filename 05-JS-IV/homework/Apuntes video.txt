@@ -1,0 +1,24 @@
+forma literla de definir objetos:
+var objeto = {
+	propiedad1:valor1,
+	...
+	propiedadN:valorN,
+	}
+ejemplo:
+var rodri={
+	nombre:'Rodri',
+	apellido:'Loza',
+	edad:30,
+	saludar:function(){
+	console.log('Hola Rodri');
+	},//aca se cierra la propiedad saludar
+	hobbies:['escalar','fotografia'],
+	}//llave de cierre del objeto
+
+var persona = {
+	nombre:'jimmy',
+	saludar: function(){
+	console.log('Hola, ' + this.nombre); <- ahi el this, hace referencia al mismo objeto donde esta, seria lo mnismo que escribir
+						<persona.nombre == objeto.nombre>
+ }
+}
