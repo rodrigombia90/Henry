@@ -6,13 +6,14 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-  var nombre={
+  var objeto={
     nombre:nombre,
     edad:edad,
     meow:function(){
       return 'Meow!'
     }
   }
+  return objeto;
 }
 
 
@@ -32,8 +33,11 @@ function invocarMetodo(objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
-  objeto.metodo(); 
+  objeto[metodo](); 
   //importante recordar que siempre que hay una funcion necesitamos los parentesis
+  /*
+  se usa [] cuando se accede a un valor por la variable, si se accede de forma literal, se usa .
+  */
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
@@ -90,7 +94,7 @@ function tienePropiedad(objeto, propiedad) {
   // De lo contrario, devuelve "false"
   // Tu código:
   //no se le agregan las comillas porque se pasa por referencia, esta dentro del scope de tienePropiedad
-    if(usuario[propiedad]!=null)
+    if(objeto[propiedad]!=null)
   {
     return true;
   }
@@ -128,7 +132,8 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
-  return usuario.amigos.push(nuevoAmigo);
+  usuario.amigos.push(nuevoAmigo);
+  return usuario;
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -170,6 +175,10 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
+  producto.calcularPrecioDescuento=function(){
+    return this.precio-(this.precio*this.porcentajeDeDescuento);
+  }
+  return producto;
 
 
 

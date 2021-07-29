@@ -3,7 +3,7 @@
 #thirdDiv{
     height: 600px;
     width: 500px;
-    background: gray;
+    background: green;
     padding: 50px;
     border: 10px solid blue;
 }
@@ -16,6 +16,11 @@
 h1{
     color: blue;
 }
+
 img{
     width: 400px;
+}
+
+.divClass{
+    background: gray;
 }

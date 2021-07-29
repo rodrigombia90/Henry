@@ -51,7 +51,7 @@ function saludo(idioma) {
 
   if(idioma=='aleman')
   {
-    return 'Guten Tag';
+    return 'Guten Tag!';
   }
    else if(idioma=='mandarin')
   {
@@ -62,7 +62,7 @@ function saludo(idioma) {
     return 'Hello!';
   }
   else {
-    return 'hola';
+    return 'Hola!';
   }
 }
 
@@ -78,19 +78,19 @@ function colors(color) {
   switch(color)
   {
     case 'blue':
-      retorno='this is blue';
+      retorno='This is blue';
       break;
           case 'red':
-      retorno='this is red';
+      retorno='This is red';
       break;
           case 'green':
-      retorno='this is green';
+      retorno='This is green';
       break;
           case 'orange':
-      retorno='this is orange';
+      retorno= 'This is orange';
       break;
       default:
-      retorno='color not found';
+      retorno='Color not found';
   }
   return retorno;
 }
@@ -163,26 +163,26 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
-  var retorno=false;
+
+  if(num1 === 0 || num2 === 0 || num3 === 0)
+  {
+    return 'Error';
+  }
+  if(num1<0 || num2<0 || num3<0)
+  {
+    return 'Hay negativos';
+  }
   if(num1>num2&&num1>num3&&num1>0)
   {
-    retorno='Número 1 es mayor y positivo';
+    return 'Número 1 es mayor y positivo';
   }
-  else if(num1<0 || num2<0 || num3<0)
+  
+  if(num3>num1 && num3>num2)
   {
-    retorno='Hay negativos';
+    return ++num3;
   }
-  else if(num3>num1 && num3>num2)
-  {
-    retorno=num3+1;
-  }
-  else if(num1 === 0 || num2 === 0 || num3 === 0)
-  {
-    retorno='error';
-  }
-  return retorno;
 
-
+return false;
 }
 
 function esPrimo(numero) {
@@ -210,10 +210,10 @@ function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-  var retorno=false;
+  var retorno='Soy falso';
   if(valor==true)
   {
-    retorno=true
+    retorno='Soy verdadero';
   }
   return retorno;
 
@@ -227,8 +227,8 @@ function tablaDelSeis(){
   for(let i=0;i<11;i++)
   {
     arrayTablaSeis.push(6*i);
-    console.log(6*i);
   }
+  return arrayTablaSeis;
   
 }
 
@@ -253,6 +253,7 @@ function doWhile(numero) {
     numero=numero+5;
     i++;
   }while(i<8)
+  return numero;
 }
 
 
